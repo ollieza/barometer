@@ -31,7 +31,7 @@ INSTALL
 -> Barometer uses a email queue, to store emails which fail to send. This queue is processed via a cron job using the bootstrapper script found at /cron/cron_job_bootstrapper.php
 
 -> Change the local path (line 41) to your CodeIgniter installation index.php file
--> Add a cron. The queue is also processed when any message on the system is sent, so we don't need to run very regularly. Every 45 minutes works well. Add your PROCESS_EMAIL_QUEUE_KEY as defined in application/config/constants.php
+-> Add a cron. The queue is also processed when any message on the system is sent, so we don't need to run very regularly. Once an hour works well. Add your PROCESS_EMAIL_QUEUE_KEY as defined in application/config/constants.php
 e.g. 45 * * * * /srv/www/vhosts/getbarometer.com/cron/cron_job_bootstrapper.php --run=system/process_email_queue/your-queue-key-here
  
 Future development
