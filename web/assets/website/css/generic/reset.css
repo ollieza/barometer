@@ -1,0 +1,110 @@
+/*-----------------------------------------------------------------------------
+General UA style overriders
+
+author:    kos korolev
+email:     kos@pixeco.com
+-----------------------------------------------------------------------------*/
+
+* {
+	margin:0;
+	padding:0;
+	}
+	body {
+		font:'Lucida Grande', Helvetica, Arial, sans-serif;
+		color:#5a5a5a;
+		background:#fff;	
+		}
+		img {
+			border:none;
+			text-align:center;
+			font-weight:bold;
+			}
+		input,
+		select,
+		textarea {
+			font:1em "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+			}
+			textarea {
+				overflow:auto;
+				}
+		table {
+			border-collapse:collapse;
+			font-size:1em;
+			}
+			td {
+				/*vertical-align:middle;*/
+				}
+		h1, h2, h3, h4, h5, h6 {
+			/*padding:0 0 .4em;*/
+			font-weight:normal;
+			}
+			h1 {
+				font-size:2.6em;
+				}
+			h2 {
+				font-size:1.9em;
+				}
+			h3 {
+				padding-bottom:.2em;
+				font-size:1.5em;
+				}
+			h4 {
+				font-size:1em;
+				padding-bottom: 0.2em;
+				}
+			h5 {
+				padding-top: 5px;
+				font-size:1em;
+				}
+			h6 {
+				padding-bottom:.2em;
+				font-size:1.1em;
+				}
+		p {
+			padding:0 0 8px;
+			}
+		ul {
+			list-style:none;
+			}
+			.content ul,
+			.content ol {
+				padding:0 1.2em .8em;
+				}
+				.content ul {
+					list-style:disc;
+					}
+				.content li {
+					padding:0 0 .6em;
+					}
+		a { -moz-outline-style:none; outline:none; } /* Clears Firefox dotted borders */
+		a:link {
+			text-decoration:underline;
+			cursor:pointer;
+			}
+		br {
+			clear:both;
+			line-height:0;
+			}
+		hr {
+			clear:both;
+			height:1px; 
+			border:none; 
+			border-top:1px solid #688FA3;
+			margin:5px 0px; 
+			}
+		sub {
+			vertical-align:-.5em;
+			line-height:0.7em;
+			}
+		sup {
+			vertical-align:super;
+			}
+		button,
+		input.button,
+		input.submit {
+		    overflow:visible;
+		    padding:0 4px;
+		    line-height:normal;
+			vertical-align:middle;
+			cursor:pointer;
+			}

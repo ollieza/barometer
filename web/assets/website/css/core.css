@@ -1,0 +1,182 @@
+/* =Importing rules
+-------------------------------------------------------*/
+
+@import url(generic/reset.css);
+@import url(generic/helpers.css);
+
+/* =Elements
+-------------------------------------------------------*/
+
+body {
+	color:#5A5A5A;
+	background-image:url("../images/blue_to_white_gradient.jpg");
+	background-repeat:repeat-x;
+	font-family:'Lucida Grande',Helvetica,Arial,sans-serif;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	text-align:left;
+	}
+	a {
+		color: #1f	8fc4;
+		text-decoration: none;
+		}
+	a:link {
+		color: #1f8fc4;
+		text-decoration: none;
+		}
+	a:visited {
+		color: #1f8fc4;
+		text-decoration: none;
+		}
+	a:hover {
+		text-decoration:underline;
+		}
+	a:active {
+		text-decoration:none;
+		outline:none;
+		}
+	h1, h2, h3, h4, h5, h6 {
+		/*margin:0 0 .8em;*/
+		/*border-bottom:1px solid #0085cb;*/
+		/*color:#01667a;*/
+		}
+	h1 a:link, h1 a:visited {
+		margin-top: 0;
+	  	margin-bottom: 10px;
+	  	font-size: 100px;
+	  	color: #405156 !important;
+	  	font-family: helvetica !important;
+		font-weight: bold !important;
+		text-decoration:none;
+		}
+	h2 {
+		font-size:1.6em;
+		}
+	h3 {
+		font-size:1.2em;
+		font-weight:bold;
+		padding-bottom:17px !important;
+	}
+	p {
+		padding:0 0 0.8em;
+		}
+
+/* =Flash data styling
+--------------------------------------------------------*/
+div.flash_success {
+	background:#E2F9E3 url('../images/green_tick.gif') no-repeat 0px 3px; 
+	border: 1px solid #99CC99; 
+	padding:2px 0px 2px 33px; 
+	margin: 10px 0 18px 0;
+	font-size: 1.3em;
+}
+div.flash_error {
+	background: #FBE6F2 url('../images/error.png') no-repeat 5px 5px; 
+	border: 1px solid #F83434; 
+	padding:2px 10px 2px 33px; 
+	margin: 10px 0 18px 0;
+	font-size: 1.3em;
+}
+
+/* =Site styling
+--------------------------------------------------------*/
+
+#wrapper {
+  	width: 950px;
+  	margin: 50px auto;
+  	padding: 25px;
+  	background-color: #fff;
+	border:3px solid #CCCCCC;
+	overflow: hidden;
+	border-bottom-width:5px;
+	border-right-width:5px;
+}
+div.credits {
+	clear: both;
+ 	text-align: right;
+	padding-top: 15px;
+}
+h1.barometer {
+	display: inline;
+}
+span.count {
+	float: right;
+}
+
+/* =Homepage styling
+--------------------------------------------------------*/
+
+body#homepage h2 {
+	margin-bottom: 40px;
+}
+div.left_column {
+	float: left;
+	width: 500px;
+}
+div.right_column {
+	float: right;
+	width: 400px;
+}
+
+ul.advantages {
+	margin-bottom: 25px;
+	list-style-position:inside;
+	list-style-type: circle;
+}
+
+div.signup {
+	padding: 10px;
+	background-color: #FFF9D8;
+	}
+	div.signup p {
+		padding: 0 0 5px 0 !important;
+		}
+	div.signup label.error {
+		background:transparent url(../images/unchecked.gif) no-repeat scroll 0 0;
+		color:#EA5200;
+		font-weight:bold;
+		padding-bottom:10px;
+		padding-left:20px;
+		}
+	div.signup input#email_address {
+		margin-top: 10px;
+		width: 200px;
+		}
+	div.signup input#submit {
+		margin-top:10px;
+		width: 220px;
+	}
+
+div.screenshots img {
+	margin-bottom: 10px;
+}
+
+div#create_barometer_loading {
+	margin: 100px 350px 100px 294px;
+	padding:3px 0 1px 39px; 
+	background: transparent url(../images/medium_load.gif) no-repeat 0 3px;
+	width:300px;
+	font-size: 21px;
+	}
+	
+/* =Success page styling
+--------------------------------------------------------*/
+
+body#success h2 {
+	margin-bottom: 20px;
+}
+
+form#successfully_created { 
+	margin: 20px 0 30px 0;
+	font-size: 1.1em;
+	clear: both;
+	}
+	form#successfully_created textarea { 
+		height:200px;
+		padding:10px;
+		width:929px;
+		background-color: #fcfcd6;
+		border: 1px #cccccc dashed;
+		}

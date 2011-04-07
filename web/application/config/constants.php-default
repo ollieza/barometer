@@ -1,0 +1,88 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+/*
+|--------------------------------------------------------------------------
+| File and Directory Modes
+|--------------------------------------------------------------------------
+|
+| These prefs are used when checking and setting modes when working
+| with the file system.  The defaults are fine on servers with proper
+| security, but you may wish (or even need) to change the values in
+| certain environments (Apache running a separate process for each
+| user, PHP under CGI with Apache suEXEC, etc.).  Octal values should
+| always be used to set the mode correctly.
+|
+*/
+define('FILE_READ_MODE', 0644);
+define('FILE_WRITE_MODE', 0666);
+define('DIR_READ_MODE', 0755);
+define('DIR_WRITE_MODE', 0777);
+
+/*
+|--------------------------------------------------------------------------
+| File Stream Modes
+|--------------------------------------------------------------------------
+|
+| These modes are used when working with fopen()/popen()
+|
+*/
+
+define('FOPEN_READ',							'rb');
+define('FOPEN_READ_WRITE',						'r+b');
+define('FOPEN_WRITE_CREATE_DESTRUCTIVE',		'wb'); // truncates existing file data, use with care
+define('FOPEN_READ_WRITE_CREATE_DESTRUCTIVE',	'w+b'); // truncates existing file data, use with care
+define('FOPEN_WRITE_CREATE',					'ab');
+define('FOPEN_READ_WRITE_CREATE',				'a+b');
+define('FOPEN_WRITE_CREATE_STRICT',				'xb');
+define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
+
+/*
+|--------------------------------------------------------------------------
+| Custom Constants 
+|--------------------------------------------------------------------------
+|
+|
+*/
+
+define('APP_NAME','Barometer');
+define('TAGLINE_1', 'What impression are your users giving you?');
+define('SLOGAN', 'Gauge your users experience');
+define('SYSTEM_EMAIL',"system@{$config['base_url']}");
+
+// Set to $config['base_url'] by default or upload files to another server e.g. S3 and change the urls in the uploaded files to load from this
+// new location. Include http:// and a trailing slash e.g. http://getbarometer.s3.amazonaws.com/
+define('BAROMETER_ASSETS_URL', $config['base_url']);
+
+// Security
+
+define('PROCESS_EMAIL_QUEUE_KEY', 'add a random string here');
+
+// Environment settings
+
+define('ENABLE_PROFILER', FALSE);
+define('USE_SMTP', TRUE);
+define('EMAIL_ERROR_LOG', FALSE);
+
+// Notifications
+
+define('ADMIN_EMAIL', 'you@example.com');
+
+// System email settings
+
+define('FROM_EMAIL', "feedback@${$config['base_url']}");
+define('FROM_NAME', APP_NAME." feedback system");
+define('NO_REPLY_EMAIL', "no-reply@${$config['base_url']}");
+
+// SMTP settings
+
+define('MAIL_PROT', 'smtp');
+define('SMTP_HOST', 'ssl://smtp.gmail.com');
+define('SMTP_USER', 'no-reply@getbarometer.com');
+define('SMTP_PASS', ''); // Not included for obvious security reasons
+define('SMTP_PORT', 465);
+define('SMTP_TIMEOUT', 5);
+define('MAIL_TYPE', 'html');
+define('MAIL_CHARSET', 'utf-8');
+
+/* End of file constants.php */
+/* Location: ./application/config/constants.php */

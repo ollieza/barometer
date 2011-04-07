@@ -1,0 +1,59 @@
+/*-----------------------------------------------------------------------------
+General helper classes
+
+version:   1.3
+author:    konstantin korolev
+email:     kos.korolev@gmail.com
+-----------------------------------------------------------------------------*/
+
+/* =Layout & box model helpers
+-------------------------------------------------------*/
+.hide {display:none}
+.left {float:left}
+.right {float:right}
+.no-float {float:none}
+.center {margin:0 auto}
+.clear {clear:both}
+.clear-right {clear:right}
+.clear-left {clear:left}
+.no-wrap {white-space:nowrap}
+.no-border {border:none}
+.block {display:block}
+.inline {display:inline}
+.full-width {width:100%; clear:both;}
+
+/* =Text helpers
+-------------------------------------------------------*/
+.align-center {text-align:center}
+.align-left {text-align:left}
+.align-right {text-align:right}
+.bold {font-weight:bold}
+.italic {font-style:italic}
+.underline {text-decoration:underline}
+.stroke {text-decoration:line-through}
+.small {font-size:x-small}
+.smaller {font-size:xx-small}
+.big {font-size:x-large}
+.bigger {font-size:xx-large}
+.uppercase {text-transform:uppercase}
+.sup {vertical-align:super}
+.sub {vertical-align:sub}
+
+/* =Other helpers
+-------------------------------------------------------*/
+.error, .required {color:#ff0000}
+.hand {cursor:pointer}
+
+/* =Clearfix
+-------------------------------------------------------*/
+.clearfix:after {
+    content:".";
+    display:block;
+    clear:both;
+    visibility:hidden;
+    line-height:0;
+    height:0;
+	}
+	.clearfix{display:inline-block;}
+	html[xmlns] .clearfix {display:block;}
+	* html .clearfix {height:1%;}

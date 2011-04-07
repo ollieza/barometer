@@ -1,0 +1,52 @@
+Barometer - http://getbarometer.org - running on CI 1.7.2
+========================================================================
+
+The easiest way to add a stylish feedback form to your website. Enter your email address to create your barometer. You will get a few lines of code to add to your website to enable your feedback tab.
+
+INSTALL
+-------
+
+1. Add your base_url to application/config/config.php 
+
+-> It is crucial that this is hard coded as a host won't be automatically assigned when accessed via cron.
+
+2. Database
+
+-> Install schema using the table schemas in /schema
+-> Copy application/config/database.php-default to application/config/database.php and add your database settings 
+
+3. Setup local constants
+
+-> Copy application/config/constants.php-default to application/config/constants.php
+-> Add your settings including SMTP server details, PROCESS_EMAIL_QUEUE_KEY (to prevent queue processing being triggered by a normal user)
+
+4. Barometer assets
+
+-> The feedback tab installed on external websites uses a few static files barometer.js, barometer.css, barometer_iframe.css and some images. These can all be found in /web/assets/barometer. They are separated into this directory so they can be hosted on a external webserver such as Amazon S3. To do this you need to upload the directory assets/barometer keeping the directory layout the same e.g.http://getbarometer.s3.amazonaws.com/assets/barometer/ and add the hostname to BAROMETER_ASSETS_URL in application/config/constants.php
+
+-> The file /web/assets/barometer/javascripts/barometer.js has two hardcoded urls. These need to be changed to your base_url as defined in application/config/config.php
+
+5. Setup cron
+
+-> Barometer uses a email queue, to store emails which fail to send. This queue is processed via a cron job using the bootstrapper script found at /cron/cron_job_bootstrapper.php
+
+-> Change the local path (line 41) to your CodeIgniter installation index.php file
+-> Add a cron. The queue is also processed when any message on the system is sent, so we don't need to run very regularly. Every 45 minutes works well. Add your PROCESS_EMAIL_QUEUE_KEY as defined in application/config/constants.php
+e.g. 45 * * * * /srv/www/vhosts/getbarometer.com/cron/cron_job_bootstrapper.php --run=system/process_email_queue/your-queue-key-here
+ 
+Future development
+------------------
+
+1. Spam prevention
+
+-> Although it is yet to be an issue, simple spam prevention has been built in. If a ip sends 5 messages in the last 90 seconds their feedback will not be sent. This could be improved by storing their ip in the db (example schemas at /schema/ip_address_ban-schema.sql & /schema/ip_address_spam_schema.sql) and operating spam and ban lists.
+
+2. Include referral url in Barometer feedback email
+
+-> When Barometer sends a feedback email, the website it was sent from is not included. This makes things a little confusing if you have Barometer installed on multiple websites. The referring domain is stored when a Barometer form is opened (/schema/barometer_form_lods-schema.sql). This could be cross referenced with the ip that sent the form to get the referring domain and include it in the email Barometer sends.
+
+Extra
+-----
+
+If you'd like to request changes, report bug fixes, or contact
+the developer of this library, email <orattue[at]toomanytabs.com>
