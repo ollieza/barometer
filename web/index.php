@@ -53,7 +53,7 @@
  * as this file.
  *
  */
-	$system_path = 'system';
+	$system_path = 'system_files';
 
 /*
  *---------------------------------------------------------------
