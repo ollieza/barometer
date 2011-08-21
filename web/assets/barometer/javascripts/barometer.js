@@ -8,7 +8,7 @@ BAROMETER.load = function(barometer_id) {
   this.empty_url = "http://getbarometer.com/assets/barometer/images/transparent.gif";
   this.feedback_url = 'http://getbarometer.com/system/feedback_form/' + this.barometer_id;
 
-  this.tab_html = '<a id="barometer_tab" onclick="BAROMETER.show();" href="#">Feedback</a>';
+  this.tab_html = '<a id="barometer_tab" href="javascript:BAROMETER.show()">Feedback</a>';
   this.overlay_html = '<div id="barometer_overlay" style="display: none;">' +
 			'<div id="barometer_main" style="top: 130.95px;">' +
 			'<a id="barometer_close" onclick="document.getElementById(\'barometer_overlay\').style.display = \'none\';return false" href="#"/></a>' +
