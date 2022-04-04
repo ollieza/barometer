@@ -44,9 +44,3 @@ Future development
 2. Include referral url in Barometer feedback email
 
 -> When Barometer sends a feedback email, the website it was sent from is not included. This makes things a little confusing if you have Barometer installed on multiple websites. The referring domain is stored when a Barometer form is opened (/schema/barometer_form_lods-schema.sql). This could be cross referenced with the ip that sent the form to get the referring domain and include it in the email Barometer sends.
-
-Extra
------
-
-If you'd like to request changes, report bug fixes, or contact
-the developer of this library, email <orattue[at]toomanytabs.com>
