@@ -6,11 +6,7 @@
  * The web's simplest feedback form
  * 
  * @package   Barometer
- * @author    Ollie Rattue, Too many tabs <orattue[at]toomanytabs.com>
- * @copyright Copyright (c) 2011, Ollie Rattue
  * @license   http://www.opensource.org/licenses/mit-license.php
- * @link      http://github.com/ollierattue/Barometer
- * @link	  http://getbarometer.org
  */
 
 class Barometer_model extends CI_Model 
