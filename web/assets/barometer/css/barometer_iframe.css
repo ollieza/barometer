@@ -52,7 +52,7 @@ p {
 input, textarea {
 	padding:5px; 
 	font-size:14px; 
-	width:98%;
+	max-width:98%;
 	}
 
 input[type=text], textarea {
